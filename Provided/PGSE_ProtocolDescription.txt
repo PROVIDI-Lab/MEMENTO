@@ -1,0 +1,12 @@
+ For both the shells and the grid PGSE signals, the parameters are listed in different columns and each row is a measurement 
+ All sequence parameters are given in SI units (m,s,T, ..) with exception of the b-value, which is given in the common s/mm2 unit.
+ 1 - G - Gradient Strength [T/m]
+ 2 - gx1 - normalized x component of gradient  
+ 3 - gy1 - normalized y component of gradient 
+ 4 - gz1 - normalized z component of gradient 
+ 5 - smalldel - gradient duration [s]
+ 6 - DELTA - time between the gradients [s]
+ 7 - rt - rise time of the gradient [s]
+ 8 - TE - echo time [s] 
+ 9 - TR - repetition time [s]
+ 10 - B - total b-value of the sequence [s/mm2]
