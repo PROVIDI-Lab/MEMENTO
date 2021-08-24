@@ -1,3 +1,9 @@
+% Code used for the preparation and evaluation of the MEMENTO challenge
+% organized by Kurt Schilling, Andrada Ianus and Alberto De Luca
+% Code author: Alberto De Luca (a.deluca-2@umcutrecht.nl)
+% This script fits the DTI model to DDE data and evaluates the prediction
+% performance
+
 %% Load protocol and data
 data = ISBI_LoadSubchallenge1Description('Provided/DDE_ProtocolDescription.txt','Provided/DDE_provided_acq_params.txt');
 data.Signals = load('Provided/DDE_provided_signals.txt');

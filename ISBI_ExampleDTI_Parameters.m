@@ -1,3 +1,8 @@
+% Code used for the preparation and evaluation of the MEMENTO challenge
+% organized by Kurt Schilling, Andrada Ianus and Alberto De Luca
+% Code author: Andrada Ianus and Alberto De Luca  
+% This script fits the DTI model to a given signal
+
 function [MD, FA] = ISBI_ExampleDTI_Parameters(DTI_fit)
 % extracts the MD and FA values from the fitted DT
 MD = zeros(size(DTI_fit,1),1);
