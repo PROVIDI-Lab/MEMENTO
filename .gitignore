@@ -1,0 +1,14 @@
+
+._DTIFit_Check.m
+._EvaluateSubmission.m
+._ISBI_ExampleDTI_Fit.m
+._ISBI_ExampleDTI_Parameters.m
+._ISBI_LoadSubchallenge1Description.m
+._ISBI_Subchallenge1_SyntheticEvaluation.m
+._ISBI_Subchallenge1_VisualEvaluation.m
+._README.md
+._Subchallenge1SimpleDDE.m
+._Subchallenge1SimpleDODE.m
+._Subchallenge1SimplePGSEGrids.m
+._Subchallenge1SimplePGSEShells.m
+._SubmissionsCount.m
