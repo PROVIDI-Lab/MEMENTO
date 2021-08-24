@@ -1,14 +1,21 @@
 % Code used for the preparation and evaluation of the MEMENTO challenge
 % organized by Kurt Schilling, Andrada Ianus and Alberto De Luca
 % Code author: Alberto De Luca (a.deluca-2@umcutrecht.nl)
-% This script fits the DTI model to PGSE shells data and evaluates the prediction
-% performance
-
-%% Load protocol and data
+% This script evaluates the residuals of test DTI prediction
 data = ISBI_LoadSubchallenge1Description('Provided/PGSE_ProtocolDescription.txt','Provided/PGSE_shells_provided_acq_params.txt');
 data.Signals = load('Provided/PGSE_shells_provided_signals.txt');
 
 %% As sanity check predict the provided data
+
+
+IX = data.B <= 1 | abs(data.B-1000) < 10;
+
+data.B = data.B(IX);
+data.gx1 = data.gx1(IX);
+data.gy1 = data.gy1(IX);
+data.gz1 = data.gz1(IX);
+data.Signals = data.Signals(IX,:);
+
 test_data = data;
 test_data.GroundTrueValues = data.Signals;
 
@@ -41,6 +48,12 @@ end
 
 %% Now, predict the unprovided data
 test_data = ISBI_LoadSubchallenge1Description('Provided/PGSE_ProtocolDescription.txt','Provided/PGSE_shells_unprovided_acq_params.txt');
+IX = test_data.B <= 1 | abs(test_data.B-1000) < 10;
+
+test_data.B = test_data.B(IX);
+test_data.gx1 = test_data.gx1(IX);
+test_data.gy1 = test_data.gy1(IX);
+test_data.gz1 = test_data.gz1(IX);
 
 %% Perform the prediction
 PredictedSignals = ISBI_ExampleDTI_Prediction(DTI_fit,test_data);
@@ -57,6 +70,8 @@ fclose(fout);
 test_data.Signal = load(out_file);
 %% Final evaluation - code not provided to the participants
 test_data.GroundTrueValues = load('Unprovided/PGSE_shells_unprovided_signals.txt');
+% test_data.Signal = test_data.Signal(IX,:);
+test_data.GroundTrueValues = test_data.GroundTrueValues(IX,:);
 
 ISBI_Subchallenge1_VisualEvaluation(test_data);
 

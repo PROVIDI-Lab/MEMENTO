@@ -1,3 +1,8 @@
+% Code used for the preparation and evaluation of the MEMENTO challenge
+% organized by Kurt Schilling, Andrada Ianus and Alberto De Luca
+% Code author: Alberto De Luca (a.deluca-2@umcutrecht.nl)
+% This function can be used to read the acquisition settings corresponding to the
+% provided signals
 function data = ISBI_LoadSubchallenge1Description(protocol_description_file,acquisition_description_file)
     % Read protocol description file
     fields = {};
