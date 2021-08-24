@@ -1,6 +1,6 @@
 # Official repository of the sub-challenge 1 of the MEMENTO White Matter challenge (ISBI 2020)
 This repository contains files used for preparation and evaluation of the sub challenge 1 of the MEMENTO challenge (https://my.vanderbilt.edu/memento/). The results of the challenge are now published on NeuroImage, see [De Luca et al. 2020](https://www.sciencedirect.com/science/article/pii/S1053811921006431).
-This repository contains the data of the challenge as well as evaluation scripts to serve as benchmark for future methods (see [EvaluateSubmissions.m).
+This repository contains the data of the challenge as well as evaluation scripts to serve as benchmark for future methods (see [EvaluateSubmissions.m](https://github.com/PROVIDI-Lab/MEMENTO/blob/main/EvaluateSubmission.m)).
 
 # What can be found here?
 - The provided (training) and unprovided (prediction) signals acquired with PGSE, DDE and DODE can be found in the *Provided* and *Unprovided* folders, respectively. 
